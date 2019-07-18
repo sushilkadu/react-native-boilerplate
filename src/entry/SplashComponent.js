@@ -5,8 +5,15 @@ const splashscreen = require("./../../assets/icon.png");
 
 import { Container, Content } from "native-base";
 
+import { observer, inject } from "mobx-react";
+
+// @inject("splashStore")
+@observer
 export default class SplashComponent extends Component {
   render() {
+    const { splashStore } = this.props;
+    console.log("The Splashstore: ", this.props);
+
     return (
       <Container style={styles.container}>
         <View style={styles.content}>
