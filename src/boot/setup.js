@@ -15,7 +15,7 @@ export default class Setup extends Component {
   render() {
     const stores = config();
 
-    console.log("STORES: ", this.props);
+    // console.log("STORES: ", this.props);
 
     return (
       <StyleProvider style={getTheme(variables)}>
