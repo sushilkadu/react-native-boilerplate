@@ -1,8 +1,8 @@
 import { observable, autorun, action } from "mobx";
 import { createContext } from "react";
 
-class SplashStore {
-  @observable test = "testing";
+export default class SplashStore {
+  @observable test = "This is NEW";
 
   count = 0;
 
@@ -19,4 +19,4 @@ class SplashStore {
   }
 }
 
-export const SplashStoreContext = createContext(new SplashStore());
+// export const SplashStoreContext = createContext(new SplashStore());
