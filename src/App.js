@@ -11,6 +11,7 @@ import { Root } from "native-base";
 // import BlankPage from "./container/BlankPageContainer";
 // import Sidebar from "./container/SidebarContainer";
 import SplashComponent from "./entry/SplashComponent";
+import LoginScreen from "./login/LoginScreen";
 
 // export default function App() {
 //   return (
@@ -31,7 +32,8 @@ const styles = StyleSheet.create({
 
 const App = createStackNavigator(
   {
-    Splash: { screen: SplashComponent }
+    Splash: { screen: SplashComponent },
+    Login: { screen: LoginScreen }
   },
   {
     initialRouteName: "Splash",

@@ -10,18 +10,28 @@ import { observer, inject } from "mobx-react";
 import { SplashStoreContext } from "./../entry/splashstore";
 
 @inject(stores => {
-  console.log("StOrE: ", JSON.stringify(stores));
-
   return {
     splashStore: stores.splashStore
   };
 })
 @observer
 export default class SplashComponent extends Component {
-  render() {
-    console.log("THE PROPS: ", this.props);
-
+  componentWillMount() {
     const { splashStore } = this.props;
+
+    console.log("componentWillMountNow: ", splashStore);
+    splashStore.splashMounted();
+    console.log("After");
+  }
+
+  render() {
+    const { splashStore } = this.props;
+    console.log("routeToNext: ", splashStore.routeToNext);
+    if (splashStore.routeToNext) {
+      // TODO route to login
+      this.props.navigation.navigate("Login");
+      return null;
+    }
 
     return (
       <Container style={styles.container}>
