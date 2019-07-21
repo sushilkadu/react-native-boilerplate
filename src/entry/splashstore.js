@@ -4,7 +4,7 @@ import { createContext } from "react";
 export default class SplashStore {
   SPLASH_TIMEOUT = 3000;
 
-  @observable test = "This is NEW";
+  @observable test = "This is NEW one";
   @observable routeToNext = false;
 
   count = 0;

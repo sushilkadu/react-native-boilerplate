@@ -71,3 +71,15 @@ export default class LoginScreen extends Component {
     );
   }
 }
+
+// +              <Left>
+// +                <Button transparent textStyle={{ color: "#87838B" }}>
+// +                  <Text>Forgot Password</Text>
+// +                </Button>
+// +              </Left>
+// +
+// +              <Right>
+// +                <Button transparent textStyle={{ color: "#87838B" }}>
+// +                  <Text>Register jk</Text>
+// +                </Button>
+// +              </Right>
